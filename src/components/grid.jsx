@@ -21,7 +21,7 @@ export function Grid() {
     console.log(grid)
     return (
         <>
-            <div className="grid">
+            <div className="grid col-lg-6">
                 {
                     grid.map((row, rindex) => {
                         return row.map((cell, cindex) => {
