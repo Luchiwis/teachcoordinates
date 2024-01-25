@@ -23,6 +23,7 @@ export function SidePanel() {
         const randomColor = randColor()
         setNewColor(randomColor)
     }
+    
 
     return (
         <div className='text-center side-panel'>
