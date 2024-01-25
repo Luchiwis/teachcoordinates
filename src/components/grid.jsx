@@ -1,15 +1,10 @@
-import { useState, useEffect } from "react"
 import { randColor } from "/src/logic/randColor"
+import { useContext } from "react"
+import { GridContext } from "./ContextProvider"
 
-export function Cell({children, x, y}){
-    const [color, setColor] = useState('black')
-    
-    const handleClick  = () => {
-        setColor(randColor)
-    }
-
+export function Cell({children, color}){
     return (
-        <div onClick={handleClick} style={{backgroundColor: color}}>
+        <div style={{backgroundColor: color}}>
             {children}
         </div>
     )
@@ -17,16 +12,16 @@ export function Cell({children, x, y}){
 
 export function Grid() {
     // 10x10
-    const [grid, setGrid] = useState(Array(10).fill(Array(10).fill(null)))
-    console.log(grid)
+    const [grid, setGrid] = useContext(GridContext)
+
     return (
         <>
-            <div className="grid col-lg-6">
+            <div className="grid">
                 {
                     grid.map((row, rindex) => {
-                        return row.map((cell, cindex) => {
+                        return row.map((color, cindex) => {
                             return (
-                                <Cell key={rindex+cindex} x={rindex} y={cindex}>{rindex+"-"+cindex}</Cell>
+                                <Cell key={rindex+"-"+cindex} color={color}></Cell>
                             )
                         })
                     })
