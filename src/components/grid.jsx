@@ -1,4 +1,3 @@
-import { randColor } from "/src/logic/randColor"
 import { useContext } from "react"
 import { GridContext } from "./ContextProvider"
 
