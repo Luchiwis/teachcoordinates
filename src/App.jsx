@@ -1,6 +1,6 @@
 import '/src/App.css'
 
-import { Main } from '/src/pages/Main'
+import { Mainpage } from '/src/pages/Mainpage'
 
 function App() {
 

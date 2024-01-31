@@ -2,7 +2,7 @@ import { Grid } from '../components/Grid'
 import { SidePanel } from '/src/components/SidePanel'
 import { ContextProvider } from '/src/components/ContextProvider'
 
-export function Main() {
+export function Mainpage() {
     return (
         <>
             <ContextProvider>
